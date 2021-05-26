@@ -1,0 +1,43 @@
+<html lang="en">
+    <head>
+        <title>Fashion Feet</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <h1 class="c1">Fashion inventory management system</h1>
+        <h3><a href="/create" class="c2" >Add new product</a></h3>
+        <h3><a href="/updatestock" class="c2">update stock</a></h3>
+        <h3><a href="/deleteproduct" class="c2">delete product</a></h3>
+
+        <h2>Welcome</h2>
+        <p>The fashion company has been established in the year 2020.Though the world was in such dire state we wanted to spread happiness with our service</p>
+        <center>
+            <table>
+                <tr>
+                    <th>Product ID</th>
+                    <th>Category</th>
+                    <th>Type</th>
+                    <th>Size</th>
+                    <th>Stock</th>
+                    <th>Price</th>
+                </tr>
+                <% for(var i=0; i<data.length ; i++) {%>
+                    <tr>
+                        <td><%= data[i].pid %></td>
+                        <td><%= data[i].category %></td>
+                        <td><%= data[i].type %></td>
+                        <td><%= data[i].size %></td>
+                        <td><%= data[i].stock %></td>
+                        <td><%= data[i].sp %></td>
+                    </tr>
+                    <% } %>
+            </table>
+        </center>
+        <footer>
+            &copy Copyright 2021 KKK.
+        </footer>
+    </body>
+
+</html>
